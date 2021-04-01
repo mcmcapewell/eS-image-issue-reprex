@@ -7,4 +7,7 @@ Minimal reproducible example of the electricShine image issue
 ## What is the issue?
 The `logoexample.png` renders fine on the plot, but in the body it cannot be found. 
 This is despite the `zzz.R` file which adds `www` to the resource path.
-This issue does not happen if you just install the package normally (download the repo and use `devtools::build()` or `remotes::install_github(`mcmcapewell/eS-image-issue-reprex`)`).
+This issue does not happen if you just install the package normally via `remotes::install_github('mcmcapewell/eS-image-issue-reprex')`.
+
+## How to run the package?
+`imgissuereprex::run_app()`

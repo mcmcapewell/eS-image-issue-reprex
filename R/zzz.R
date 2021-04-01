@@ -6,8 +6,27 @@
   # Fixes the magick rendered image issue
   Sys.setenv("R_LIBS_USER" = R.home("library"))
   # This allows www/ to be discovered - should fix the logo appearing in body but doesn't
-  shiny::addResourcePath('www',
-                         system.file('app/www',
-                                     package = 'imgissuereprex'))
+   shiny::addResourcePath(
+    prefix = "assets",
+    directoryPath = system.file(
+      "assets",
+      package = "imgissuereprex"
+    )
+  )
 									 
+}
+
+
+.onLoad <- function(libname, pkgname) {
+  shiny::addResourcePath(
+    prefix = "assets",
+    directoryPath = system.file(
+      "assets",
+      package = "imgissuereprex"
+    )
+  )
+}
+
+.onUnload <- function(libname, pkgname) {
+   shiny::removeResourcePath("assets")
 }

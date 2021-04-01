@@ -9,7 +9,7 @@ app_ui <- function(){
 	
     shiny::wellPanel(
 	  shiny::p("Here is an image - meant to show"),
-      shiny::tags$img(src = "www/logoexample.png"),
+      shiny::tags$img(src = "assets/logoexample.png"),
 	  shiny::numericInput(inputId = "n_", "Sample size for normal distribution",
                           min = 1, max = 100000, value = 100)
     ),

@@ -1,7 +1,7 @@
 #' Pastes logo onto a histogram
 #'
 #' @noRd
-testfunc = function(N = 100, dir_ = system.file('app/www', package = 'imgissuereprex')) {
+testfunc = function(N = 100, dir_ = system.file('assets', package = 'imgissuereprex')) {
   logo = magick::image_read(paste(dir_, "logoexample.png", sep = "/"))
   
   graphics::hist(stats::rnorm(n = N), prob = TRUE, xlim = c(-6, 6))
