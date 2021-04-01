@@ -1,0 +1,17 @@
+Package: imgissuereprex
+Title: Image issue reprex for electricShine
+Version: 0.1.0
+Authors@R: c(person("M", "Capewell", email = "blahblah@blah.com", role = c("aut", "cre")))
+Description: Minimal reprex for image issue in electricShine
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    datasets,
+    grDevices,
+    graphics,
+    stats,
+    magick
+Depends: 
+    shiny
+RoxygenNote: 6.1.1
